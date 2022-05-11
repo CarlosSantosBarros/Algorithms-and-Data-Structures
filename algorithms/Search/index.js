@@ -8,6 +8,13 @@ function verifySearch(index) {
 	else console.log("Target not found " + index);
 }
 
+/**
+ * Pass a Sorted array and the type of search you want to do.
+ * Options are currently "binary" and "binary_recursive",
+ * passing null will do a linear search
+ * @param {Array} arraySorted
+ * @param {String} searchType
+ */
 module.exports = (arraySorted, searchType) => {
 	let result;
 	switch (searchType) {
