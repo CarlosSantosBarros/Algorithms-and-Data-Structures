@@ -4,20 +4,22 @@ const bogoSort = require("./bogoSort");
 const selectionSort = require("./selectionSort");
 const quickSort = require("./quickSort");
 
-const arrayUnsorted = [5, 1, 8, 6, 3, 10, 6, 2, 3, 9, 7, 4];
+module.exports = (array) => {
+	array.sort(() => Math.random() - 0.5);
+	console.log(`Unsorted Array: ${array}`);
+	// // Merge Sort
+	// const sortedArray = mergeSort(arrayUnsorted);
 
-// // Merge Sort
-// const sortedArray = mergeSort(arrayUnsorted);
+	// // Bogo Sort
+	// const bogoArray = [5, 1, 8, 3, 10];
+	// const sortedArray = bogoSort(bogoArray);
 
-// // Bogo Sort
-// const bogoArray = [5, 1, 8, 3, 10];
-// const sortedArray = bogoSort(bogoArray);
+	// // Selection Sort
+	// const sortedArray = selectionSort(arrayUnsorted);
 
-// // Selection Sort
-// const sortedArray = selectionSort(arrayUnsorted);
+	// Quick Sort
+	const sortedArray = quickSort(array);
 
-// Quick Sort
-const sortedArray = quickSort(arrayUnsorted);
-
-console.log(verify(sortedArray));
-console.log(`Sorted Array: ${sortedArray}`);
+	if (verify(sortedArray)) console.log(`Sorted Array: ${sortedArray}`);
+	else console.log("Array is unsorted");
+};
