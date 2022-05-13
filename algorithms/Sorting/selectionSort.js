@@ -9,14 +9,14 @@ module.exports = function selectionSort(unsorted) {
 	 */
 	let sorted = [];
 	while (unsorted.length) {
-		const indexOfSmallest = findSmallestIndex(unsorted);
+		const indexOfSmallest = findIndexOfSmallest(unsorted);
 		// Use index to remove and return the value and place it in the new Array
 		sorted.push(unsorted.splice(indexOfSmallest, 1).pop());
 	}
 	return sorted;
 };
 
-function findSmallestIndex(array) {
+function findIndexOfSmallest(array) {
 	/**
 	 * Find the smallest number by using the index as a bookmark
 	 * Return index

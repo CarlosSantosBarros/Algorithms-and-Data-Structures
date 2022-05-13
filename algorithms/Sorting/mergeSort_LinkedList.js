@@ -11,6 +11,8 @@ module.exports = function mergeSort(linkedList) {
 	 * Recursively "split" the linked list into single node sublists
 	 * Re-merges single node sublists into one sorted list and return
 	 */
+
+	// Base case
 	if (linkedList.size() === 1) return linkedList;
 	else if (linkedList.isEmpty()) return linkedList;
 

@@ -14,7 +14,7 @@ module.exports = function mergeSort(array) {
 	 * Combine: Merge the sorted sub-arrats created in the previous step
 	 */
 
-	// Recursion exit
+	// Base case
 	if (array.length <= 1) return array;
 
 	const { leftHalf, rightHalf } = split(array);
